@@ -1,0 +1,198 @@
+html, body {
+    background-color: black;
+    font-family: 	"MathJax_Typewriter", "Courier Prime";
+    line-height:	 1.5em;
+	
+    margin: 	0 !important;
+    padding: 	0 !important;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+}
+
+#background {
+    background: black;
+    background: linear-gradient(0deg, rgba(26,25,64,1) 0%, rgba(25,120,227,1) 100%);
+
+    width:      800%;
+    min-width:  800%;
+    height:     150em;
+    min-height: 150em;
+
+    position:  absolute;
+    top:       -16.5%;
+    left:      50%;
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+    
+	    -webkit-pointer-events: none;
+    -moz-	pointer-events: none;
+    -ms-	pointer-events:	none;
+    -o-		pointer-events: none;
+    		pointer-events:	none;
+    
+    -webkit-user-select: 	none;
+    -moz-	user-select: 	none;
+    -ms-	user-select: 	none;
+    -o-		user-select: 	none;
+    user-select: 	none;
+    
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tree-background {
+    position:  absolute;
+    top:       60%;
+    left:      35%;
+    transform: translate(-50%, -50%);
+
+    width: 25em;
+
+    z-index: -1;
+   	
+	    -webkit-pointer-events: none;
+    -moz-	pointer-events: none;
+    -ms-	pointer-events:	none;
+    -o-		pointer-events: none;
+    		pointer-events:	none;
+    
+    -webkit-user-select: 	none;
+    -moz-	user-select: 	none;
+    -ms-	user-select: 	none;
+    -o-		user-select: 	none;
+    		user-select: 	none;
+}
+
+#house-background {
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 25em;
+    height: 25em;
+}
+
+a:link {
+	color: #5886fc;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:visited {
+	color: #FFDB94;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:hover {
+	color: #395392;
+	background-color: transparent;
+	text-decoration: underline;
+}
+a:active {
+	color: #0D408E;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+.house-floor {
+	display:	flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items: 	center;
+
+	cursor: grab;
+
+	background-color: black;
+
+	width: 68em;
+	border: 2px solid black;
+	outline: 5px solid black;
+}
+
+.house-floor:active {
+    cursor: grabbing;
+    
+    -webkit-user-select: 	none;
+    -moz-	user-select: 	none;
+    -ms-	user-select: 	none;
+    -o-		user-select: 	none;
+    user-select: 	none;
+}
+
+.room {
+    -webkit-width: 	350px;
+    -moz-   width: 	350px;
+    -ms-    width: 	350px;
+    -o-	    width: 	350px;
+	    width: 	350px;
+   	
+	    -webkit-pointer-events: none;
+    -moz-	pointer-events: none;
+    -ms-	pointer-events:	none;
+    -o-		pointer-events: none;
+    		pointer-events:	none;
+    
+    -webkit-user-select: 	none;
+    -moz-	user-select: 	none;
+    -ms-	user-select: 	none;
+    -o-		user-select: 	none;
+    		user-select: 	none;
+}
+
+.float {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-transition: 0.3s, visibility 0.3s;
+}
+
+.float:hover {
+    -webkit-transform: translate(0px, -5px);
+}
+
+@media (max-width: 768px) { /* TABLET RESOLUTION */
+}
+
+@media (max-width: 576px) { /* PHONE RESOLUTION */
+}
+
+
+.door-class {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+	
+	width: 100%;
+	height: 100%;
+
+	background-color: black;
+}
+
+#door {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 10em;
+	transform-style: preserve-3d;
+}
+
+.doom-anim-class {
+	animation-name: openDoor;
+	animation-duration: 2s;
+	animation-delay: 1s;
+}
+
+@keyframes openDoor {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

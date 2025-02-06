@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Articles Room </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../src/icons/gooffee.webp" rel="icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tooltip.css">
+    <link rel="stylesheet" href="../css/articles-style.css">
+    <link rel="preload" href="https://asgooffeeasme.neocities.org/src/about-animation.gif" as="image">
+    <style>
+      #about-room-button {
+  	    position: absolute;
+  	    width: 120px;
+  	    height: 180px;
+  	    transform: translate(10em, 8.5em);
+  
+  	    cursor: pointer;
+      }
+      
+      #writing-room-button {
+    	  position: absolute;
+    	  width: 180px;
+    	  height: 180px;
+    	  transform: translate(5em, 5em);
+    	  
+    	  cursor: pointer;
+      }
+      #button-room-button {
+    	  position: absolute;
+    	  width: 60px;
+    	  height: 40px;
+    	  transform: translate(11.5em, -4.5em) rotateZ(-25deg);
+    	  
+    	  cursor: pointer;
+      }
+      
+      #diary-room-button {
+    	  position: absolute;
+    	  width: 60px;
+    	  height: 260px;
+    	  transform: translate(5em, -20em);
+    	  
+    	  cursor: pointer;
+      }
+
+      #articles-room-button {
+    	  position: absolute;
+    	  width: 250px;
+    	  height: 100px;
+    	  transform: translate(2.5em, -13em);
+    	  
+    	  cursor: pointer;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header id="header">
+    </header>
+
+    <main id="panning-container" style="width: 100%; height: 100%; overflow: hidden;">
+      <div id="panning-content" style="position: relative; color: white;">
+
+	<div class="articles">
+	  <div class="text">
+	    <p class="title">
+	      Title.
+	    </p>
+	    <div style="width: 100%; height: 5px; background-color: black;"></div>
+	    <div style="height: 3px;"></div>
+	    <div style="width: 100%; height: 2px; background-color: black;"></div>
+	    <p class="text-body">
+	      Text Body.
+	    </p>
+	  </div>
+	</div>
+	
+      </div>
+    </main>
+    
+    <footer></footer>
+    
+    <script>
+      const _panning_container = document.getElementById('panning-container');
+      const _panning_content = document.getElementById('panning-content');
+      
+      let __dragging = false;
+      let _start_x, _start_y;
+      let _translate_x = 0, _translate_y = 0;
+      
+      _panning_container.addEventListener('mousedown', _start_dragging);
+      _panning_container.addEventListener('mousemove', _drag);
+      _panning_container.addEventListener('mouseup', _stop_dragging);
+      _panning_container.addEventListener('mouseleave', _stop_dragging);
+      
+      function _start_dragging(e) {
+	  __dragging = true;
+	  _start_x = e.clientX - _translate_x;
+	  _start_y = e.clientY - _translate_y;
+      }
+      
+      function _drag(e) {
+	  if (!__dragging) return;
+	  e.preventDefault();
+	  _translate_x = e.clientX - _start_x;
+	  _translate_y = e.clientY - _start_y;
+	  updatePosition();
+      }
+      
+      function _stop_dragging() {
+	  __dragging = false;
+      }
+      
+      function updatePosition() {
+	  _panning_content.style.transform = `translate(${_translate_x}px, ${_translate_y}px)`;
+      }
+    </script>
+  </body>
+</html>

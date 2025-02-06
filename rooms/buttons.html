@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> My Neighbors </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../src/icons/gooffee.webp" rel="icon">
+  </head>
+  <style>
+    ::-webkit-scrollbar {
+	width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+	background: #070707;
+    }
+    ::-webkit-scrollbar-thumb {
+	background: #141414;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+    }
+
+    #main {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+    }
+
+    #text-body {
+	color: white;
+	
+	-webkit-width: 50%;
+	-moz-	width: 50%;
+	-ms-	width: 50%;
+	-o-	width: 50%;
+	        width: 50%;
+
+	-webkit-height: 35%;
+	-moz-   height: 35%;
+	-ms-    height: 35%;
+	-o-     height: 35%;
+	        height: 35%;
+	
+	background-color: rgba(5, 5, 5, .8);
+	border-radius:    10px;
+	padding:          70px 25px 25px 25px;
+	border:           2px dashed orange;
+
+	display:         flex;
+	flex-direction:  column;
+	justify-content: center;
+	align-items:     center;
+
+	z-index: 1;
+
+	overflow-y: auto;
+    }
+    
+    #text-body h3 {
+	font-size: 2em;
+	letter-spacing: 10px;
+	line-height: 0.7em;
+	
+	-webkit-width: 90%;
+	-moz-	width: 90%;
+	-ms-	width: 90%;
+	-o-		width: 90%;
+	width: 90%;
+    }
+    
+    #text-body p {
+	-webkit-width: 100%;
+	-moz-	width: 100%;
+	-ms-	width: 100%;
+	-o-	width: 100%;
+	width: 100%;
+
+	text-align: center;
+		
+    }
+    
+    .buttons-list {
+	display:         flex;
+	justify-content: center;
+	flex-direction:  row;
+	align-items:     center;
+	flex-wrap:       wrap;
+    }
+    
+    #me {
+	width: 35em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 576px) { /* PHONES */
+	#main {
+	    margin-top: 0%;
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	    
+	    top: 50%;
+	    left: 50%;
+	    
+	    height: 100%;
+	}
+    
+	#text-body {
+	    -webkit-width: 80%;
+	    -moz-	width: 80%;
+	    -ms-	width: 80%;
+	    -o-	width: 80%;
+	    width: 80%;
+	    
+	    -webkit-height: 100%;
+	    -moz-	height: 100%;
+	    -ms-	height: 100%;
+	    -o-	height: 100%;
+	    height: 100%;
+
+	    margin-top: 50px;
+	    margin-bottom: 50px;
+	}
+	#text-body .txb {
+	    -webkit-width: 100%;
+	    -moz-	width: 100%;
+	    -ms-	width: 100%;
+	    -o-	width: 100%;
+	    width: 100%;
+	    
+	    background-color: rgba(5, 5, 5, .8);
+	    border-radius:    10px;
+	    padding:          25px 25px 25px 25px;
+	    border:           2px dashed orange;
+	}
+    }
+  </style>
+  <body>
+    <header>
+    </header>
+    
+    <img id="me" src="../src/me.webp" alt="::me::">
+    <div id="main">
+      <div id="text-body">
+	<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 40%;">
+	  <img class="tree-folder open" src="../src/icons/open-folder.webp" alt="::folder::" width="35px" height="35px">
+	  <p>My Favourite Personal Websites(or just my neighbors):</p>
+	</div>
+	<div class="buttons-list">
+	  <a href="https://iwillneverbehappy.neocities.org/" target="_blank" class="float"><img src="https://iwillneverbehappy.neocities.org/images/positivenegative.gif"></a>
+	  <a href="https://projectc190.neocities.org" target="_blank" class="float"><img src="https://user-images.githubusercontent.com/57303754/278845967-82e5bfc1-a3a0-476c-870c-c62b729f94ab.gif"></a>
+	  <a href="https://fi-do-manin.neocities.org/" target="_blank" class="float"><img src="https://fi-do-manin.neocities.org/button.png"></a>
+	  <a href="https://lazybones.neocities.org/" target="_blank" class="float"><img src="https://lazybones.neocities.org/IMAGES/lazybonesicon4.png"></a>
+	  <a href="https://irony-machine.neocities.org/" target="_blank" class="float"><img src="https://irony-machine.neocities.org/buttons/buttons/irony-machine.png"></a>
+	  <a href="https://dorival.neocities.org/" target="_blank" class="float"><img src="https://dorival.neocities.org/img/dorival-button.gif"></a>
+	  <a href="https://jutipia.neocities.org/" target="_blank" class="float"><img src="https://jutipia.neocities.org/img/buttons/jutipia.gif"></a>
+	  <a href="https://aegi.neocities.org/" target="_blank" class="float"><img src="https://aegi.neocities.org/images/aegi_button_2.gif"></a>
+	  <a href="https://gildedware.neocities.org/index.html" target="_blank" class="float"><img src="https://gildedware.neocities.org/pageassets/button%202.gif"></a>
+	  <a href="https://abcthehuman.neocities.org/" target="_blank" class="float"><img src="https://abcthehuman.neocities.org/images/button.gif"></a>
+	  <a href="https://i-land.online/" target="_blank" style="margin-left: 20px; margin-right: 20px;">I-Land</a>
+	  <a href="https://vinizinho.net/" target="_blank" class="float"><img src="https://vinizinho.net/figures/button_1.png"></a>
+	  <a href="https://hnrikaster.neocities.org/" target="_blank" class="float"><img src="https://hnrikaster.neocities.org/button_rike.gif"></a>
+	  <a href="https://berbardo.com/" target="_blank" class="float"><img src="https://berbardo.com/img/buttons/bernardo.png"></a>
+	  <a href="https://cyberstheb.neocities.org/" target="_blank" class="float"><img src="https://cyberstheb.neocities.org/imgs/buttongif1.gif"></a>
+	  <a href="https://magilovescats.neocities.org/" target="_blank" style="margin-left: 20px; margin-right: 20px;">Magi's Blog</a>
+	</div>
+	<p>
+	  And here's my website <em>butt</em>on. If you link me, do not hesitate
+	  to tell me:
+	</p>
+	<!-- ' -->
+	<div class="buttons-list">
+	  <a href="https://asgooffeeasme.neocities.org/" target="_blank" class="float"><img src="https://asgooffeeasme.neocities.org/src/button.gif"></a>
+	</div>
+	<p>
+	  -- @ --
+	</p>
+	<div class="buttons-list">
+	  <a href="https://hellnet.work/8831/img/buttons/Area51_3405_linux_logo.gif" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/Area51_3405_linux_logo.gif"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/Area51_Dimension_6305_DEATHCLOCK.JPG" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/Area51_Dimension_6305_DEATHCLOCK.JPG"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/Athens_Academy_9053_graphics_pdani2.gif" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/Athens_Academy_9053_graphics_pdani2.gif"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/CapeCanaveral_8443_gc_icon.gif" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/CapeCanaveral_8443_gc_icon.gif"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/CapeCanaveral_Hangar_1222_havsmile.gif" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/CapeCanaveral_Hangar_1222_havsmile.gif"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/es.geocities.com_emibel_porta_gerencia_ii_art10_archivos_css1.png" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/es.geocities.com_emibel_porta_gerencia_ii_art10_archivos_css1.png"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/TimesSquare_Fortress_3798_button_57.gif" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/TimesSquare_Fortress_3798_button_57.gif"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/TimesSquare_Corridor_2200_jenni.gif" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/TimesSquare_Corridor_2200_jenni.gif"></a>
+	  <a href="https://hellnet.work/8831/img/buttons/Tokyo_Palace_2137_dick-web.jpg" target="_blank" class="float"><img src="https://hellnet.work/8831/img/buttons/Tokyo_Palace_2137_dick-web.jpg"></a>
+	  <a href="https://that-stella.neocities.org/img/btns/dlt-twt.gif" target="_blank" class="float"><img src="https://that-stella.neocities.org/img/btns/dlt-twt.gif"></a>
+	  <a href="https://that-stella.neocities.org/img/btns/internet-archive.gif" target="_blank" class="float"><img src="https://that-stella.neocities.org/img/btns/internet-archive.gif"></a>
+	  <a href="https://gildedware.neocities.org/pageassets/keyboard.png" target="_blank" class="float"><img src="https://gildedware.neocities.org/pageassets/keyboard.png"></a>
+	  <a href="https://88by31.neocities.org/web/getcomputer.jpg" target="_blank" class="float"><img src="https://88by31.neocities.org/web/getcomputer.jpg"></a>
+	  <a href="https://projectc190.neocities.org/images/web-stuff/linux_mint.gif" target="_blank" class="float"><img src="https://projectc190.neocities.org/images/web-stuff/linux_mint.gif"></a>
+	</div>
+      </div>
+      <a href="../index.html" style="z-index: 5;">[Back to the Old House]</a>
+    </div>
+    
+    <footer></footer>
+  </body>
+</html>

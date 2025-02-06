@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to build and install SDL library</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="../src/icons/open-book.webp" rel="icon">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <style>
+    #main {
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	height: 100%;
+	width: 50%;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+	width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+	background: #070707;
+    }
+    ::-webkit-scrollbar-thumb {
+	background: #141414;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+    }
+    
+    #text-body {
+	margin: 10px 10px 10px 10px;
+	color: white;
+    }
+    
+    #text-body h3 {
+	font-size: 2em;
+	letter-spacing: 10px;
+	line-height: 0.7em;
+	
+	-webkit-width: 90%;
+	-moz-	width: 90%;
+	-ms-	width: 90%;
+	-o-		width: 90%;
+	width: 90%;
+    }
+    
+    #text-body p {
+	text-align: justify;
+	
+	-webkit-width: 90%;
+	-moz-	width: 90%;
+	-ms-	width: 90%;
+	-o-		width: 90%;
+	width: 90%;
+    }
+    
+    #text-body .txb {
+	-webkit-width: 90%;
+	-moz-	width: 90%;
+	-ms-	width: 90%;
+	-o-		width: 90%;
+	width: 90%;
+	
+	background-color: rgba(5, 5, 5, 255);
+	border-radius: 10px;
+	padding: 25px 25px 25px 25px;
+	border: 2px dashed white;
+    }
+    
+    .txb p {
+	-webkit-min-width: 100%;
+	-moz-	min-width: 100%;
+	-ms-	min-width: 100%;
+	-o-		min-width: 100%;
+	min-width: 100%;
+	
+    }
+    
+    @media (max-width: 750px) {
+	#main {
+	    height: 100%;
+	    width: 100%;
+
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	}
+    }
+  </style>
+  <body>
+    <header>
+    </header>
+    
+    <div id="main">
+      <div id="text-body">
+	<div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	  <img class="tree-folder open" src="../src/icons/open-folder.webp" alt="::folder::" width="35px" height="35px">
+	  <p>How to build and install SDL library [EN][10/08/2024]</p>
+	</div>
+	<div class="txb">
+	  <p>
+	    First of all, I need to say that the 'tutorial' below is not quite a tutorial. I know this
+	    sounds contradictory, but that's because I am not doing it to teach people; I'm
+	    actually writing this post 'cause, at the moment, I am learning SDL and wanted an
+	    easy place to remember the commands to build and install this development library.
+	  </p>
+	  <p>
+	    With this said: welcome, daniel. Here you'll learn how you can build
+	    and install SDL. The first thing you need to do is clone the SDL repo with Git:
+	  <p style="font-size: 0.9em; background-color: rgba(24, 24, 24, 255); border-radius: 10px; padding-left: 10px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; word-wrap: break-word;">git clone -b release-2.30.x --depth 1 https://github.com/libsdl-org/SDL.git
+	  </p>
+
+	  After cloning the repo, you'll need to go into the SDL folder (usually called "SDL" or "SDL_main") and create a new folder inside it called "build".
+	  After that, you go into this new folder and execute the following command:
+	  
+	  <p style="font-size: 0.9em; background-color: rgba(24, 24, 24, 255); border-radius: 10px; padding-left: 10px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; word-wrap: break-word;">../configure
+	  </p>
+
+	  It'll configure and prepare everything for the up-coming compilation. Then you'll only need to execute the basic <em>make build</em> commands:
+	  	  
+	  <p style="font-size: 0.9em; background-color: rgba(24, 24, 24, 255); border-radius: 10px; padding-left: 10px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; word-wrap: break-word;">make<br>sudo make install
+	  </p>
+
+	  And done! Congrat's, you just built and installed SDL. Oh!, and one last note: i know you often have trouble finding
+	  where SDL had been installed. To be kind and help you (future daniel), here's a command line to show you where this library is:
+
+	  <p style="font-size: 0.9em; background-color: rgba(24, 24, 24, 255); border-radius: 10px; padding-left: 10px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; word-wrap: break-word;">sdl2-config --libs --cflags
+	  </p>
+	  </p>
+	</div>
+	<div style="height: 15px;"></div>
+	<a href="../rooms/writing.html">[Back to the Old Writing Room]</a>
+      </div>
+    </div>
+    
+    <footer></footer>
+  </body>
+</html>

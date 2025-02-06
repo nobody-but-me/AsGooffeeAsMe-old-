@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <title id="title"> Loading... </title>
+  <link href="../src/loading.webp" rel="icon">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background-color: black;
+      width: 100%;
+      height: 100%;
+    }
+    body #main-div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading {
+      width:  100px;
+      height: 100px;
+  
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+  
+      -webkit-pointer-events: none;
+      -moz-pointer-events: none;
+      -ms-pointer-events: none;
+      -o-pointer-events: none;
+      pointer-events: none;
+    }
+  </style>
+</html>
+<body>
+  <header></header>
+  
+  <main>
+    <div id="main-div">
+      <img class="loading" src="../src/loading.gif" alt="Loading Mug">
+      <p style="width: 25px"></p>
+      <div style="width: 25%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+	<h2 id="text" style="width: 100%; height: 1px; color: white;">
+	  Loading...
+	</h2>
+	<h3 style="width: 100%; color: gray;">
+	  I love my friends.
+	</h3>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script>
+    var _text = document.getElementById("text");
+    var _title = document.getElementById("title");
+    var _loading_time = 350;
+
+    function _loading_animation() {
+	setTimeout(() => {
+	    _text.textContent = "Loading";
+	    _title.textContent = "Loading";
+	    setTimeout(() => {
+		_text.textContent = "Loading.";
+		_title.textContent = "Loading.";
+		setTimeout(() => {
+		    _text.textContent = "Loading..";
+		    _title.textContent = "Loading..";
+		    setTimeout(() => {
+			_text.textContent = "Loading...";
+			_title.textContent = "Loading...";
+		    }, (_loading_time));
+		}, (_loading_time));
+	    }, (_loading_time));
+	}, (_loading_time));
+    }
+    _loading_animation();
+    setInterval(_loading_animation, _loading_time * 4);
+    setTimeout(() => {
+	window.location.href = "../rooms/writing.html";
+    }, (2500));
+  </script>
+</body>

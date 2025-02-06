@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> False(or not) Diary </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="../src/icons/open-book.webp" rel="icon">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <style type="text/css">
+    body, header {
+	color: white;
+    }
+
+    #content {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	
+	border-left: 70px solid rgba(15, 15, 15, 255);
+
+	height: 100%;
+    }
+    
+    #panel {
+	background-color: rgba(5, 5, 5, 255);
+	border-radius: 0px 10px 10px 0px;
+	padding: 15px 15px 15px 15px;
+
+	min-width: 30%;
+	height: 90%;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+    }
+    #panel p {
+	padding-left: 3px;
+	text-align: justify;
+    }
+    
+    #main {
+	height: 100%;
+	width: 80%;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+	width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+	background: #070707;
+    }
+    ::-webkit-scrollbar-thumb {
+	background: #141414;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+    }
+    
+    #text-body {
+	margin: 10px 10px 10px 10px;
+	color: white;
+    }
+    
+    #text-body h3 {
+	font-size: 2em;
+	letter-spacing: 10px;
+	line-height: 0.7em;
+	
+	-webkit-width: 90%;
+	-moz-	width: 90%;
+	-ms-	width: 90%;
+	-o-		width: 90%;
+	width: 90%;
+    }
+    
+    #text-body p {
+	text-align: justify;
+	
+	-webkit-width: 90%;
+	-moz-	width: 90%;
+	-ms-	width: 90%;
+	-o-		width: 90%;
+	width: 90%;
+    }
+    
+    #text-body .txb {
+	-webkit-width: 90%;
+	-moz-	width: 90%;
+	-ms-	width: 90%;
+	-o-		width: 90%;
+	width: 90%;
+	
+	background-color: rgba(5, 5, 5, 255);
+	border-radius: 10px;
+	padding: 25px 25px 25px 25px;
+	border: 2px dashed white;
+    }
+    
+    .txb p {
+	-webkit-min-width: 100%;
+	-moz-	min-width: 100%;
+	-ms-	min-width: 100%;
+	-o-		min-width: 100%;
+	min-width: 100%;
+    }
+
+    risked {
+	text-decoration: line-through;
+    }
+    
+    @media (max-width: 750px) {
+	#main {
+	    height: 100%;
+	    width: 100%;
+
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	}
+    }
+  </style>
+  <body>
+    <header>
+    </header>
+    
+    <div id="content">
+	
+      <div style="flex-direction: column; width: 40%; height: 100%;">
+	<p style="padding: 5px 5px 5px 16px; margin-bottom: 0px; background-color: rgba(15, 15, 15, 255); border-radius: 0px 10px 0px 0px;">
+	  A False(or not) Diary
+	</p>
+	
+	<div id="panel">
+	  <p>
+	    Hello, my dear reader. Welcome to my diary page. Here
+	    you'll could find a little about my boring days.
+	  </p>
+	  <p>
+	    When I was exploring other personal webs and seeing their
+	    amazing blogs, I wanted to create my own.
+	  </p>
+	  <p>
+	    To give a little context about the name of this page:
+	    at the beginning, I was thinking of crazy ideas such as write
+	    false stories for this diary and code a whole game for y'all
+	    find out which stories are true or false and then earn points
+	    with it and... Many more other things that no longer have sense.
+	    I don't know, I just wanted to create different things but, at
+	    the same time, fun, you know?
+	  </p>
+	  <p>
+	    I'm lazy now and I no longer have energy to do that. Maybe in
+	    the future, who knows. For now, I'm a little tired of this
+	    pathetic struggle of mine for the originality.
+	  </p>
+	  <a href="../index.html">[Back to the Old House]</a>
+	  <div style="min-height: 50px; height: 50px;"></div>
+	</div>
+	<!--' -->
+      </div>
+
+      <div style="min-width: 2%;"></div>
+      
+      <div id="main">
+	<!-- POST TEMPLATE;
+	<div id="text-body">
+	  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	    <img class="tree-folder open" src="../src/icons/file.webp" alt="::folder::" width="35px" height="35px">
+	    <p> Post title -- Week day, Month and month day, Year </p>
+	  </div>
+	  <div class="txb">
+	    <p>
+	      Hello World
+	    </p>
+	    <p>
+	      <br>
+	      Signed: Daniel.
+	      <br>
+	    </p>
+	  </div>
+	  <div style="height: 15px;"></div>
+	</div>
+	-->
+	<div id="text-body">
+	  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	    <img class="tree-folder open" src="../src/icons/file.webp" alt="::folder::" width="35px" height="35px">
+	    <p> Post title -- Week day, Month and month day, Year </p>
+	  </div>
+	  <div class="txb" style="border: 2px dashed orange;">
+	    <p>
+	      When I was a kid, I used to look at the chirstmas tree through the ajar door at the nights. And, on this specific christmas-eve midnight, while I was gazing at that flashing and blinking lights, I wondered why, not knowing exactly what. The monolith doors then seemed even scarier and I just wished to get cramp in one of my legs or lose one of my baby-teeth again. The clouds, the warm sand below my feet, full of grains between the toes, the seashells scattered along the shore, and the few strands of hair on the top of the head of the old ones had, indeed, something to tell me, but I just didn't hear them. So, because my sacred innocence, I ended up burning my entire body in that sun, in a city that, despite being my hometown, I do not know anything about -- such as an impersonal strange's house. Thus, I grew old, just to see the skies get grayer and more opaque. 
+	    </p>
+	    <p>
+	      Nowadays, I walked to the front door; its glass were not as smirch as they're used to be. Even the night were not very smirch: although its grayish colour, the sky looked way clearer than usual. <i>Perhaps I could be a writer of countless Molly Bloom's monologues</i>, I thought. The automatic answer was no, 'cause not even among the greatest schizophrenics I would really feel part of something. <i>Indeed</i>, I went through one more thought, <i>neither those clouds, nor the biology projects walking on the street, nor this floor nor this ceiling, nor this agonizing song playing right now, nor those websites, computers, the internet, the programming languages nor any other fucking shit related to it: none of them have full stop periods, commas, semicolons or dashes.</i>
+	    </p>
+	    <p>
+	      <i>It reminds me of Molly Bloom's monologue</i>.
+	    </p>
+	    <p>
+	      Christmas reminds me of oranges -- the colour and the fruit --, quiet and strange nights, mango trees, beaches, salty juices and cakes made out of sponges. There's nothing prettier than this. The teachers. The broken clocks which dressed up in time machines. The unintentional and unnecessary poetic nightmares about points and giant geometries I can't understand to this day. Even the ugly drawings. I started missing those things so much that today the way I found to revive such innocence was to try forgetting how to breathe, just so that in the few seconds I have left, I have to relearn how to pull the air into my lungs once again and once more.
+	    </p>
+	    <p>
+	      Since that old woman commented about the way I talk -- '<i>his talk's weird, isn't it? I don't know, sounds different, like a foreigner</i>', '<i>no, it's how Dani talks</i>' --, I knew something I am neither able to put into words -- perhaps what the clouds didn't tell me -- nor into projects.
+	    </p>
+	    <p>
+	      "Am I a scientist or an artist?"
+	    </p>
+	    <p>
+	      "Why not both?"
+	    </p>
+	    <p>
+	      "Because for each one I'd have to dedicate a considerable amount of time to get good at."
+	    </p>
+	    <p>
+	      "I don't think so. Why are you separating them?"
+	    </p>
+	    <p>
+	      "I don't know. I do need to be the better at them, y'know? I do need.", so that was the moment I realized I just started, somehow and somewhen, to be a <a target="_blank" href="https://youtu.be/12zAD0y_vT0?si=fgLnpxrkBPTqXyHk">pretender</a>.
+	    </p>
+	    <p>
+	      The fact is that I wished to update more this website with cool and interesting projects, but it takes a long time to do and I can't do anything when I'm too focused on "important life stuff".
+	    </p>
+	    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	      <img src="../src/diary/aHappyBoyhood.png" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	      <div style="min-width: 15px;"></div>
+	      <img src="../src/diary/boyhood.png" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	    </div>
+	    <div style="min-height: 15px;"></div>
+	    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	      <img src="../src/diary/jaziel.jpg" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	      <div style="min-width: 15px;"></div>
+	      <img src="../src/diary/imiss.jpg" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	      <div style="min-width: 15px;"></div>
+	      <img src="../src/diary/ezequiel.jpg" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	    </div>
+	    <div style="min-height: 15px;"></div>
+	    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	      <img src="../src/diary/felicidade.png" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	      <div style="min-width: 15px;"></div>
+	      <img src="../src/diary/us.png" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	      <div style="min-width: 15px;"></div>
+	      <img src="../src/diary/littlekidsplaying.png" style=" max-width: 400px; max-height: 300px; border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	    </div>
+	    <p>
+	      <br>
+	      Signed, Daniel.
+	      <br>
+	    </p>
+	  </div>
+	  <div style="height: 15px;"></div>
+	</div>
+	
+	<div id="text-body">
+	  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	    <img class="tree-folder open" src="../src/icons/file.webp" alt="::folder::" width="35px" height="35px">
+	    <p> Exams, Programming and gays -- Saturday, November 16, 2024 </p>
+	  </div>
+	  <div class="txb">
+	    <p>
+	      I haven't<!--'--> posted anything here in a while, right? To be honest, I was even thinking about giving up this section of my website.
+	      But, as you can see -- and read --, I did not, so let's<!--'--> talk a little about the last few days.
+	    </p>
+	    <p>
+	      I had two different university admission exams in this time period, one of them which had two phases that I've<!--'--> already done. These admission exams
+	      are generically called "vestibular" here.
+	    </p>
+	    <p>
+	      In general, these exams require knowledge in philosophy, art, portuguese grammar, english, spanish, text interpretation, literature, physics, mathematics, biology, biochemistry, chemistry in itself and an essay on a topic of social relevance --
+	      to summarize: everything. I was supposed to study for a whole year for them, but I literally didn't<!--'--> study a fucking shit; I spelt this entire year in this current
+	      crazy obsession for programming that doesn't<!--'--> allow me to do anything else no matter how hard I try to.
+	    </p>
+	    <p>
+	      At the end, to my surprise, I apparently did not do that badly: out of ninety question for both exams, I got fifty five correctly in the first phase of the first exam -- nothing too impressive since
+	      this phase had no mathematics, physics, biology and chemistry -- and, for the last one, I got exactly fifty correctly. Unfortunately, because my lazy dirty ass, I don't<!--'--> have the answer key
+	      for the second phase of the first exam, i.e.: I have no idea how badly I did in that one.
+	    </p>
+	    <p>
+	      Despite this, I should've<!--'--> done much better than that; these results are really shameful, just like that bronze medal. So, what I'm<!--'--> planning is to redo these two exams next year. That way, I'll<!--'-->
+	      also be able to learn more about mathematics and physics, which are studies fields that really interest me. My goal is to get at least seventy-five to eighty correctly answers out of the nintety questions. If I can do
+	      this, I'll<!--'--> be an accomplished man -- or not, knowing myself. 
+	    </p>
+	    <p>
+	      About programming: I stopped my Vulkan studies. I know, I shouldn't<!--'--> have done that, but I really, really want to finish at least a demo of this game engine before my 20's<!--'-->. So, from now on, I'm<!--'-->
+	      going to replace all the Vulkan code to OpenGL code. So then, when I have a consistent version of the engine working, I'll<!--'--> implement a Vulkan renderer -- just like Godot did. I don't<!--'--> know if it is
+	      the best approach to follow -- actually I tend to believe that it's<!--'--> not --, but I'll<!--'--> do it anyway. OpenGL is still capable to do great things and I'm<!--'--> sure it'll<!--'--> be useful for
+	      a while. After all, I bet my renderer will not be that complex.
+	    </p>
+	    <p>
+	      Now, about the gays: I don't<!--'--> know, in the last few days I was very focused on researching about how biology explains homosexuality. It's<!--'--> literally impossible to explain everything here in this short post,
+	      so I'll<!--'--> probably -- not promising anything -- write an article about this for a potential new room. For now, I'm<!--'--> going to leave this "to-do note" here.
+	    </p>
+	    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	      <img src="../src/memefrominterweb.webp" width="400px" height="400px" style="border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0,0 , 0, 0.05) 0px 1px 1px 0px;">
+	    </div>
+	    <p>
+	      <br>
+	      Signed, Daniel.
+	      <br>
+	    </p>
+	  </div>
+	  <div style="height: 15px;"></div>
+	</div>
+	<!--' -->
+	
+	<div id="text-body">
+	  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	    <img class="tree-folder open" src="../src/icons/file.webp" alt="::folder::" width="35px" height="35px">
+	    <p> The different between the <a href="./writing.html">Writing posts</a>, the <a>Articles</a> and the <a href="./diary.html">Diary posts(here)</a> -- Tuesday, October 29, 2024 </p>
+	  </div>
+	  <div class="txb">
+	    <p>
+	      I just noticed that the difference between the <a href="./writing.html">Writing posts</a>, the <a>Articles</a> and the <a href="./diary.html">Diary posts(here)</a> might be a little vacancy, so I'm writing this post(in the diary page) to clarify it(and, with this explanation, you'll see that it does not make much sense to write it here, but that's okay for now)
+	    </p>
+	    <p>
+	      Initially, I created the <a href="./writing.html">writing</a> page to share some writing projects I have -- short stories, random articles about various topics, proses in general, poetry, etc. However, as I coded the rest of the website, I realized it would become a complete mess as the scope of the site grew more and more. So, I decided to split the writing page into rooms specifically focused on each thing.
+	    </p>
+	    <p>
+	      Now the <a href="./writing.html">Writing Room</a> will be specifically focused on my fictional stories. No, I won't delete the blog posts and the other items there that no longer fit to the writing room purpose.
+	    </p>
+	    <p>
+	      This diary section here will focus on more personal content, so much so that there'll likely be many portuguese posts here.
+	    </p>
+	    <p>
+	      And, finally, the <a href="./articles.html">Articles Room</a>(still in development) will be specifically dedicated to more detailed projects. There, I plan to post large articles with an extensive reasearch about and a large number of revisions. These articles will cover varied subjects of my interest, so you can expect a lot of science, philosophy, programming, and more. 
+	    </p>
+	    <p>
+	      In general, that's it. Hopefully this helped to clear the things up.
+	    </p>
+	    <p>
+	      <br>
+	      Signed: Daniel.
+	      <br>
+	    </p>
+	  </div>
+	  <div style="height: 15px;"></div>
+	</div>
+	
+	<div id="text-body">
+	  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	    <img class="tree-folder open" src="../src/icons/file.webp" alt="::folder::" width="35px" height="35px">
+	    <p> Ladybug slippers and Computers -- Wednesday, October 23, 2024 </p>
+	  </div>
+	  <div class="txb">
+	    <p>
+	      The week almost didn't even start and it is already being tiring. Happily,
+	      I'm wearing my ladybug slippers, so I'm in a good mood.
+	    </p>
+	    <p>
+	      Today I had to choose which university I am going to get into. I had eight options,
+	      -- a really damn cool space to choose from. At the end, I basically chose universities
+	      in the computing and linguistics field -- I know, both very different from each other.
+	      By the way, I was about to choose a philosophy university, but I didn't -- mostly because
+	      R. wouldn't be there with me.
+	    </p>
+	    <p>
+	      Anyway, my first -- with highest prioprity -- choice was Journalism.
+	    </p>
+	    <p>
+	      Hmm... I don't think I have any bigger news besides that I ended up doing well at
+	      that essay I wrote on 21st and that I apparently -- I didn't get it yet -- won a bronze medal with
+	      another essay -- i.e.: I am a moss rubbed on some unimportant carpet.
+	    </p>
+	    <p>
+	      Sum's up: yes, today was definitely a day.
+	    </p>
+	    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	      <img src="../src/A.webp" width="400px" height="400px" style="border-radius: 15px; box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;">
+	    </div>
+	    <p>
+	      <br>
+	      Signed, Daniel.
+	      <br>
+	    </p>
+	  </div>
+	  <div style="height: 15px;"></div>
+	</div>
+	
+	<div id="text-body">
+	  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+	    <img class="tree-folder open" src="../src/icons/file.webp" alt="::folder::" width="35px" height="35px">
+	    <p> Boring days -- Monday, October 21, 2024 </p>
+	  </div>
+	  <div class="txb">
+	    <p>
+	      Today was one of those days where I say pratically nothing with anyone; one of those days where I just
+	      walk around the mess of my house trying to find something to do.
+	    </p>
+	    <p>
+	      R. didn't go to school today, neither H. nor J. -- i.e.: I wish I stayed at home. Deal with people
+	      while alone is such a hard challenge for me; I almost feel like I'm in the bottom of a ravine or
+	      something and, when I try to climb it, I won't be able to 'cause the whole earth will fall on my
+	      head.
+	    </p>
+	    <p>
+	      Anyway, today I had to write an essay that, to be honest, I did not do very well. Actually, my grades are
+	      getting worse and worse as the time goes on and I can't do anything besides <strong>study</strong>, so that's
+	      what I'm going to do.
+	    </p>
+	    <p>
+	      As I said in the <a href="./writing.html">Writing room</a>, I'm learning mathematics at the moment.
+	      So now that I know my latest bad grades, I'll also start to learn the other subjects, such as
+	      Geography, Philosophy(for the 3x this year), Physics, Chemistry, Arts and others. The really huge problem
+	      is that I have this thing about, for no reason, focusing a lot on some current insterest and then only
+	      being able to do things related to this current insterest for all the day. That sucks because, very often,
+	      I end up doing this hobby instead of doing the other more urgent stuff. 
+	    </p>
+	    <p>
+	      So, to overcome this my "addiction", I'm just going to combine the hobby and the urgent task!
+	    </p>
+	    <p>
+	      My "superinterest"(sorry, I don't have any better name for this) at the moment is programming.
+	      Then, as I want to re-learn school subjects in general, I'll combine both interests into programming
+	      projects, so I'll have more desire to study.
+	    </p>
+	    <p>
+	      I don't know what else to write here, so I'm just going to stop. I started talking of my boring day
+	      and now I'm lecturing about studies. Thank you for reading, this was the first official post in this
+	      online diary. Thank you very much and bye.
+	    </p>
+	    <p>
+	      Oh, and an important note: I usually review all the texts I write on this website, but I'm too lazy
+	      for this today. Sorry for the grammar errors, sue me.
+	    </p>
+	    <p>
+	      <br>
+	      Signed, Daniel.
+	      <br>
+	    </p>
+	  </div>
+	  <div style="height: 15px;"></div>
+	</div>
+      </div>
+      
+    </div>
+      
+    <footer></footer>
+  </body>
+</html>

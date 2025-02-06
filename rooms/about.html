@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> About </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+      #ABOUT {
+	  display: 		flex;
+	  flex-direction: row;
+	  justify-content:center;
+	  align-items: 	center;
+	  
+	  width: 100%;
+	  height: 100%;
+      }
+      
+      #about-img {
+	  -webkit-width: 45%;
+	  -moz-   width: 45%;
+	  -ms-    width: 45%;
+	  -o-     width: 45%;
+	  width: 45%;
+	  
+	  position: absolute;
+	  top: 50%;
+	  left: 80%;
+	  transform: translate(-50%, -50%);
+      }
+      
+      #text-body {
+	  display:        block;
+	  flex-direction: column;
+	  justify-content center;
+	  align-items:    center;
+	  hyphens: auto;
+	  
+	  -webkit-width: 50%;
+	  -moz-   width: 50%;
+	  -ms-    width: 50%;
+	  -o-     width: 50%;
+	  width: 50%;
+				
+	  -webkit-height: 90%;
+	  -moz-	  height: 90%;
+	  -ms-	  height: 90%;
+	  -o-     height: 90%;
+	          height: 90%;
+				
+	  overflow-y: auto;
+	  overflow-x: hidden;
+	  
+	  margin-right: 40%;
+      }
+      ::-webkit-scrollbar {
+	  width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+	  background: #070707;
+      }
+      ::-webkit-scrollbar-thumb {
+	  background: #141414;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+	  background: #555;
+      }
+      
+      #text-body h3 {
+	  font-size: 2em;
+	  letter-spacing: 10px;
+	  line-height: 0.7em;
+	  
+	  -webkit-width: 90%;
+	  -moz-	width: 90%;
+	  -ms-	width: 90%;
+	  -o-		width: 90%;
+	  width: 90%;
+      }
+      
+      #text-body p {
+      text-align: justify;
+      
+      -webkit-width: 90%;
+      -moz-	width: 90%;
+      -ms-	width: 90%;
+      -o-		width: 90%;
+      width: 90%;
+      }
+      
+      #text-body ul {
+	  -webkit-width: 90%;
+	  -moz-	width: 90%;
+	  -ms-	width: 90%;
+	  -o-		width: 90%;
+	  width: 90%;
+	  
+      display: block;
+      		list-style-type: disc;
+      		
+      		padding-top:    15px;
+      		padding-bottom: 15px;
+      
+	  	margin-block-start: 0.5em;
+	  	margin-block-end: 0.5em;
+	  	margin-block-start: 0.5em;
+	  	margin-block-end: 0.5em;
+	  	
+	  	background-color: rgba(5, 5, 5, 255);
+	  	border-radius: 10px;
+      }
+
+      @media (max-width: 576px) { /* PHONES */
+	  #ABOUT {
+	      width: 100%;
+      height: 100%;
+
+	      margin: 15px 15px 15px 15px;
+	  }
+
+	  #about-img {
+
+	      visibility: hidden;
+      
+	  }
+      
+	  #text-body {
+	      -webkit-width: 100%;
+	      -moz-   width: 100%;
+	      -ms-    width: 100%;
+	      -o-     width: 100%;
+	      width: 100%;
+
+	      margin-right: 5%;
+	  }
+    </style>
+  </head>
+  
+  <body style="background-color: black; color: white; letter-spacing: 2px;">
+    <header></header>
+    
+    <img id="about-img" src="../src/about.webp" alt="about...">
+    <div id="ABOUT">
+      <div id="text-body">
+	<p>
+	  <b>Daily Message</b>: I'd<!--'--> like to help, but I have no idea;
+	  <ul>
+	    Last daily messages:
+	    <li>[ <b>Daily Message</b>: I can't<!--'--> understand people ]</li>
+	    <li>[ <b>Daily Message</b>: If I want to, could I print the whole wikipedia? ]</li>
+	  </ul>
+	</p>
+	<h3> About </h3>
+	<p>
+	  Like you, I am an ape.
+	  And again like you, I also have hobbies. They usually involve researching about science, 
+	  philosophy and art, so if you have similar hobbies, maybe this 
+	  is a cool place for you. You can call me Daniel.
+	</p>
+	<h3> Contact </h3>
+	<p>
+	  <ul>
+	    <li>Gmail: asgooffeeasme@gmail.com</li>
+	    <li>Discord: boring_nerd</li>
+	  </ul>
+	</p>
+	<h3> More </h3>
+	<p>
+	  Interests:
+	  <ul>
+	    <li>Linguistics;</li>
+	    <li>Recreational programming and computer science in general;</li>
+	    <li>Physics, biology and mathematics;</li>
+	    <li>Art, especially literature, drawing and amateur filmmaking;</li>
+	  </ul>
+	</p>
+	<p>
+	  Random facts about me listed by a special friend:
+	  <ul>
+	    <li>daniel wears ladybug slippers</li>
+	    <li>daniel loves crocodiles</li>
+	    <li>daniel has a passion for philosophy</li>
+	    <li>daniel is gay (I am not)</li>
+	    <li>daniel is learning to play the keyboard! (I gave up)</li>
+	    <li>daniel is learning russian</li>
+	  </ul>
+	</p>
+	<p>
+	  Some funny and silly links that I fucking love (if your day is bad, please, read them): 
+	  <ul>
+	    <li><a target="_blank" href="https://github.com/tsoding/faq">Tsoding Faq;</a></li>
+	    <li><a target="_blank" href="https://www.youtube.com/watch?v=CJEyuMoV9o0">
+		Voylin's<!--'--> 1st April fools (after rewatching this video, it seems like a criticism to myself);
+	    </li>
+	    <li><a target="_blank" href="https://mirandaisstraight.neocities.org/">Why Mir is straight and I am not(She's<!--'--> lying);</li>
+	    <li><a target="_blank" href="https://www.youtube.com/watch?v=uLo0i-vCt_Y">Copacabana song main lead by the wonderful Elio Yoon</li>
+	  </ul>
+	</p>
+	<a href="../index.html">[Back to the Old House]</a>
+      </div>
+    </div>
+    
+    <footer></footer>
+  </body>
+</html>

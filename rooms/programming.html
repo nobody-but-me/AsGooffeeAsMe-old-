@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Programming? </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="../src/icons/book.webp" rel="icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tree-style.css">
+    
+    <style type="text/css">
+      a:link {
+          color: #5886fc;
+          background-color: transparent;
+          text-decoration: none;
+      }
+      a:visited {
+	  color: #FFDB94;
+	  background-color: transparent;
+	  text-decoration: none;
+      }
+      a:hover {
+	  color: #395392;
+	  background-color: transparent;
+	  text-decoration: underline;
+      }
+      a:active {
+	  color: #0D408E;
+	  background-color: transparent;
+	  text-decoration: underline;
+      }
+
+      body {
+	  
+	  background-image: url("https://asgooffeeasme.neocities.org/src/someone.webp");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+
+	  overflow: hidden;
+      }
+      
+      #PROGRAMMING {
+	  width: 100%;
+	  height: 100%;
+      }
+
+      #terminal {
+	  width:  60%;
+	  height: 70%;
+	  background-color: rgba(0, 0, 0, 0.6);
+
+	  position: absolute;
+	  top:      50%;
+	  left:     50%;
+	  transform:translate(-50%, -50%);
+
+	  border:     2px  solid #00cc00;
+	  border-top: 30px solid #00cc00;
+
+	  color: white;
+	  font-size: 1.3em;
+
+	  font-family: "Ubuntu", "MathJax_Typewriter", "Courier New";
+
+	  padding-left:  20px;
+	  padding-right: 20px;
+	  padding-bottom:20px;
+
+	  display: block;
+	  flex-wrap: nowrap;
+	  flex-direction: column;
+	  align-content: stretch;
+
+	  overflow-y: auto;
+	  overflow-x: hidden;
+      }
+      
+      #terminal #command-line {
+	  display:         flex;
+	  flex-direction:  row;
+	  justify-content: left;
+	  align-items:     left;
+
+	  height: 3em;
+
+      }
+      #command-line #command-field {
+	  background-color: rgba(0, 0, 0, 0);
+	  border:           none;
+	  -webkit-apparence:none;
+      apparence:        none;
+	  outline:          none;
+
+	  color: #aaaaaa;
+	  font-size: 1.0em;
+	  font-family: "Ubuntu", "MathJax_Typewriter", "Courier New";
+
+	  width: 100%;
+	  height: 3em;
+      }
+      #directory {
+	  white-space: nowrap;
+      }
+      .command-text {
+      }
+      
+      green {
+	  color: #4e9a06;
+      }
+      blue {
+	  color: #3465a4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+    
+    <div id="PROGRAMMING">
+      <div id="terminal">
+	<div id="command-line">
+	  <p id="command-prefix" style="color: #aaaaaa; height: 100%;"><green>boring_nerd@HAL9000</green>:<blue id="directory">~</blue>$</p>
+	  <div style="width: 10px;"></div>
+	  <input
+	    type="text"
+	    id="command-field"
+	    spellcheck="false"
+	    autofocus="true"
+	  >
+	</div>
+      </div>
+    </div>
+    
+    <footer></footer>
+    <script type="text/javascript">
+      // I wrote a fucking damn bad code here... please, if you are sensitive, do not see the next lines... and, for those who are capable of digesting the worst types of trash, sorry for the following
+
+      const _phone_resolution = window.matchMedia("(min-width: 576px)");
+      const _tablet_resolution = window.matchMedia("(min-width: 768px)");
+      
+      if (window.innerWidth <= 768) {
+	  alert(" This page was developed specifically for computers. Due to this, it may look strange on mobile or smaller devices. You've been warned!");
+      }
+      
+      const _background = localStorage.getItem("background");
+      if (_background) {
+	  document.body.style = "background-image: url(" + _background + ");";
+      } else {
+	  document.body.style = "background-image: url(https://asgooffeeasme.neocities.org/src/someone.webp);";
+      }
+      
+
+      const _command_prefix   	= document.getElementById("command-prefix");
+      const _command_directory	= document.getElementById("directory");
+      const _command_field    	= document.getElementById("command-field");
+      const _command_line     	= document.getElementById("command-line");
+      const _terminal         	= document.getElementById("terminal");
+      const  HDD = {
+	  0: {
+	      "DONTREAD": ["~", "boring_nerd ROOT When? 29 99:99", ["~", "~/"]],
+	      0: {
+		  "DONTREAD": ["'Game Engine'", "boring_nerd size Nov 29 01:38", ["./'Game Engine'", "'Game Engine'", "~/'Game Engine'"]],
+		  0: {
+		      "DONTREAD": ["Blog", "boring_nerd size Dec 01 16:53", ["./Blog", "Blog", "~/'Game Engine'/Blog"]],
+		      0: ["boring_nerd size Dec 01 16:54", "001", "../standalone/001.html", ["./001, ~/'Game Engine'/Blog/001"]],
+		  },
+		  1: {
+		      "DONTREAD": ["Screenshots", "boring_nerd size Dec 01 16:53", ["./Screenshots", "Screenshots", "~/'Game Engine'/Screenshots"]],
+		  }
+	      },
+	      1: ["boring_nerd size Dec 01 16:54", "README", "../standalone/README.html", ["./README", "README", "~/README"]],
+	  }
+      };
+
+      let _current_directory = HDD[0];
+      let _string_current_directory = "~";
+      let _max_folders_back = 0;
+      let _folders_history = [HDD[0]];
+      let _commands_history = [];
+      let _current_pos_commands_history = 0;
+
+
+      function _is_odd(_number) {
+	  return _number % 2;
+      }
+
+      function _mount_fake_command_input(_command) {
+	  const _fake_command_input = document.createElement("div");
+	  const shadowRoot = _fake_command_input.attachShadow({ mode: 'open' });
+	  _fake_command_input.className = "command-text";
+	  
+	  shadowRoot.innerHTML = `
+      		<style>
+      			#command-line {
+      				display: flex;
+      				flex-direction: row;
+      				justify-content: left;
+      				align-items: left;
+      				height: 3em;
+      			}
+      			#command-line input {
+      				background-color: rgba(0, 0, 0, 0);
+      				border: none;
+      				-webkit-apparence:none;
+      				apparence: none;
+      				outline: none;
+
+      				font-family: "Ubuntu", "MathJax_Typewriter", "Courier New";
+      				color: #aaaaaa;
+				font-size: 1.0em;
+
+      				width: 100%;
+      				height: 3em;
+      			}
+      			green {
+      				color: #4e9a06;
+      			}
+      			blue {
+      				color: #3465a4;
+      			}
+      		</style>
+		<div id="command-line">
+
+      			<p id="command_prefix" style="color: #aaaaaa; height: 100%;">
+      				<green>boring_nerd@HAL9000</green>:<blue style="white-space: nowrap;">${_command_directory.innerText}</blue>$
+      			</p>
+      			<div style="width: 10px;"></div>
+			<input type="text" id="command-field" spellcheck="false" autofocus="true" disable="true" placeholder="${_command}">
+      
+      		</div>`
+	  ;
+	  
+	  _terminal.insertBefore(_fake_command_input, _command_line);
+	  _terminal.scrollTop = _terminal.scrollHeight;
+      }
+
+      function _create_command_text(_command) {
+	  const _command_text = document.createElement("p");
+	  _command_text.className = "command-text";
+	  _command_text.innerText = _command;
+	  _terminal.insertBefore(_command_text, _command_line);
+	  _terminal.scrollTop = _terminal.scrollHeight;
+	  _command_field.value = "";
+      }
+
+      function _execute_command(_command) {
+	  _commands_history.push(_command);
+	  _mount_fake_command_input(_command);
+	  _current_pos_commands_history = 0;
+	  
+	  switch (_command) {
+	  case "help":
+	      _create_command_text(" echo [text]");
+	      _create_command_text(" ls -l");
+	      _create_command_text(" history");
+	      _create_command_text(" cd [DirectoryName]");
+	      _create_command_text(" nano [FileName]");
+	      _create_command_text(" clear");
+	      _create_command_text(" feh --bg-fill [URL]");
+	      _create_command_text(" exit");
+	      break;
+	  case "history":
+	      _commands_history.pop();
+	      if (_commands_history.length <= 1) {
+		  _create_command_text("total 0");
+		  return;
+	      }
+	      for (let i in _commands_history) {
+		  _create_command_text(i + " " + _commands_history[i]);
+	      }
+	      break;
+	  case "ls -l":
+	      if (Object.keys(_current_directory).length <= 1) {x
+		  _create_command_text("total 0");
+		  return;
+	      }
+
+	      const _current_directory_size = Object.keys(_current_directory).length - 1;
+	      _create_command_text("total " + _current_directory_size);
+	      for (let i in _current_directory) {
+		  const _directories = document.createElement("p");
+		  const shadowRoot = _directories.attachShadow({ mode: 'open' });
+		  _directories.className = "command-text";
+		  
+		  if (i != "DONTREAD") {
+		      if ("DONTREAD" in _current_directory[i]) {
+			  shadowRoot.innerHTML = `<div style="color: #aaaaaa;">` + _current_directory[i]["DONTREAD"][1] + ` <blue style="color: #3465a4;">` + _current_directory[i]["DONTREAD"][0] + `</blue></div>`;
+		      } else {
+			  shadowRoot.innerHTML = `<div style="color: #aaaaaa;">` + _current_directory[i][0] + " " + _current_directory[i][1] + `</div>`;
+		      }
+		  }
+		  
+		  _terminal.insertBefore(_directories, _command_line);
+		  _terminal.scrollTop = _terminal.scrollHeight;
+	      }
+	      break;
+	  case "exit":
+	      window.close();
+	  case "clear":
+	      let _elements = document.getElementsByClassName("command-text");
+	      while(_elements.length > 0) {
+		  _elements[0].parentNode.removeChild(_elements[0]);
+	      }
+	      break;
+	  default:
+	      //  -- -- BASIC CD COMMAND (without, for example, cd ~/'Game Engine'. By the way: TODO: most advanced cd command) -- --
+	      for (let i in _current_directory) {
+		  if ("DONTREAD" in _current_directory[i]) {
+		      const _new_directory = _current_directory[i];
+		      for (j in _new_directory["DONTREAD"][2]) {
+			  if (_command === "cd " + _new_directory["DONTREAD"][2][j] || _command === "cd " + _new_directory["DONTREAD"][2][j] + "/") {
+			      _string_current_directory += "/" + _new_directory["DONTREAD"][0];
+			      _folders_history.push(_new_directory);
+			      _current_directory = _new_directory;
+			      _command_directory.innerText = _string_current_directory;
+			      _max_folders_back += 1;
+			      _command_field.value = "";
+			      return;
+			  }
+		      }
+		  }
+		  // -- -- just adding nano stuff... it'll be ugly, get ready.
+		  else if (_command === "nano " + _current_directory[i][1]) { // -- -- NANO -- --
+		      // window.open(_current_directory[i][2], "_blank"); // not that ugly, actually.
+		      window.location.href = "../standalone/" + _current_directory[i][2];
+		      _command_field.value = "";
+		      return;
+		  }
+		  // _create_command_text(_command + ": command not found");
+	      }
+
+	      let _feh_command   = ["feh --bg-fill "];
+	      let _echo_command  = ["echo "];
+	      let _cd_command    = ["cd "];
+	      
+	      if (_command.match(_feh_command.join("/"))) { // -- -- FEH COMMAND -- --
+		  const _background = _command.replace(_feh_command.join("/"), "").trim();
+		  document.body.style = "background-image: url(" + _background + ");"
+		  _command_field.value = "";
+
+		  localStorage.setItem("background", _background);
+		  return;
+	      }
+	      else if (_command.match(_echo_command.join("/"))) { // -- -- ECHO COMMAND -- --
+		  let _string = "";
+		  for (let i = 0; i < _command.length; i++) {
+		      if (i > 4) {
+			  _string += _command[i];
+		      }
+		  }
+		  _create_command_text(_string);
+		  return;
+	      }
+	      else if (_command.match(_cd_command.join("/"))) { // -- -- CD .. COMMAND -- -- 
+		  const _rest = _command.replace(_cd_command.join("/"), "").trim();
+		  let _points_directories = 0;
+		  for (let i in _rest) {
+		      if (_rest[i] === ".") {
+			  _points_directories += 1;
+		      }
+		  }
+		  
+		  const _directories_to_return = _points_directories / 2;
+		  const _points_odd = _is_odd(_points_directories);
+
+		  if (_directories_to_return > _max_folders_back) {
+		      _create_command_text(_command + ": command not found");
+		      return;
+		  }
+		  if (_points_directories < 2 || _points_odd === 1) {
+		      _create_command_text(_command + ": command not found");
+		      return;
+		  }
+		  for (let i = 0; i < _directories_to_return; i++) {
+		      if ((_folders_history.length - 1) === 0) { // the urge the rewrite this entire code
+			  _create_command_text("Directory does not exist");
+			  return;
+		      }
+		      _folders_history.pop();
+		      _current_directory = _folders_history[_folders_history.length - 1];
+		  }
+		  
+		  if (_folders_history.length > 1) {
+		      _string_current_directory = "~";
+		      _command_directory.innerText = _string_current_directory;
+		      _string_current_directory += "/" + _current_directory["DONTREAD"][0];
+		      _command_directory.innerText = _string_current_directory;
+		      _max_folders_back -= 1;
+		      _command_field.value = "";
+		      return;
+		  }
+		  _string_current_directory = "~";
+		  _current_directory = HDD[0];
+		  _command_directory.innerText = _string_current_directory;
+		  _max_folders_back -= 1;
+		  _command_field.value = "";
+		  return;
+	      }
+	      else if (_command === "cd") {
+		  _string_current_directory = "~";
+		  _current_directory = HDD[0];
+		  _command_directory.innerText = _string_current_directory;
+		  _max_folders_back -= 1;
+		  _command_field.value = "";
+		  return;
+	      }
+	  }
+	  _command_field.value = "";
+      }
+
+      window.addEventListener("keydown", (_event) => {
+	  switch (_event.key) {
+	  case "Enter":
+	      if (_command_field.value != "") {
+		  _execute_command(_command_field.value);
+	      } else {
+		  _mount_fake_command_input("");
+	      }
+	      break;
+	  case "ArrowUp":
+	      if (_commands_history.length >= 1 && _current_pos_commands_history > 0) {
+		  _current_pos_commands_history -= 1;
+		  _command_field.value = _commands_history[_current_pos_commands_history];
+	      } else if (_commands_history.length >= 1 && _current_pos_commands_history <= 0) {
+		  _current_pos_commands_history = _commands_history.length - 1;
+		  _command_field.value = _commands_history[_current_pos_commands_history];
+	      }
+	      break;
+	  case "ArrowDown":
+	      if (_commands_history.length >= 1 && _current_pos_commands_history < _commands_history.length - 1) {
+		  _current_pos_commands_history += 1;
+		  _command_field.value = _commands_history[_current_pos_commands_history];
+	      } else if (_commands_history.length >= 1 && _current_pos_commands_history >= _commands_history.length - 1) {
+		  _current_pos_commands_history = 0;
+		  _command_field.value = _commands_history[_current_pos_commands_history];
+	      }
+	  }
+      });
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Gooffee? Maybe </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/icons/gooffee.webp" rel="icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tooltip.css">
+    <link rel="preload" href="./src/about-animation.gif" as="style">
+    <style type="text/css">
+      #about-room-button {
+  	    position: absolute;
+  	    width: 120px;
+  	    height: 180px;
+  	    transform: translate(10em, 8.5em);
+  
+  	    cursor: pointer;
+      }
+      
+      #writing-room-button {
+    	  position: absolute;
+    	  width: 180px;
+    	  height: 180px;
+    	  transform: translate(5em, 5em);
+    	  
+    	  cursor: pointer;
+      }
+      #button-room-button {
+    	  position: absolute;
+    	  width: 60px;
+    	  height: 40px;
+    	  transform: translate(11.5em, -4.5em) rotateZ(-25deg);
+    	  
+    	  cursor: pointer;
+      }
+      
+      #diary-room-button {
+    	  position: absolute;
+    	  width: 60px;
+    	  height: 260px;
+    	  transform: translate(5em, -20em);
+    	  
+    	  cursor: pointer;
+      }
+
+      #articles-room-button {
+    	  position: absolute;
+    	  width: 250px;
+    	  height: 100px;
+    	  transform: translate(2.5em, -13em);
+    	  
+    	  cursor: pointer;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <!--
+	  <div id="door-group" class="door-class">
+	    <p style="color: white; font-size: 1.5em; position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%);">
+	      Noc Noc
+	    </p>
+	    <img id="door" src="src/door.png" alt="The Door">
+	  </div>
+	  -->
+    </header>
+
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%;">
+      <main id="panning-container" style="width: 100%; height: 100%; overflow: hidden; display: flex; justify-content: center; flex-direction: row; align-items: center;">
+	<div id="house-background">
+	</div>
+	<div id="panning-content" style="position: relative;">
+
+	  <img src="src/roof.webp" style="position: absolute; top: -13%; left: 50%; transform: translate(-50%, -50%); z-index: 5; width: 76em; pointer-events: none; user-select: none;">
+	  <div class="house-floor">
+	    <div style="width: 350px; min-width: 350px;"></div>
+	    <div id="computer-room">
+	      <img class="room" src="src/computer-room.webp" alt="Computer Room">
+	    </div>
+	    <div style="width: 350px; min-width: 350px;"></div>
+	  </div>
+	  
+	  <div class="house-floor">
+	    <div id="writing-room">
+	      <div id="writing-room-button" class="tooltip">
+		<a href="https://asgooffeeasme.neocities.org/loadings/loading2writing"><div style="width: 100%; height: 100%;"></div></a>
+		<span class="tooltip-text">Writing?</span>
+	      </div>
+	      
+	      <img class="room" src="src/writing-room.webp" alt="Writing Room">
+	    </div>
+	    <div id="home">
+	      <div id="about-room-button" class="tooltip">
+		<span class="tooltip-text">About?</span>
+	      </div>
+	      <img class="room" src="src/first-room.webp" alt="First Room">
+	    </div>
+	    <div id="creativity-room">
+	      <img class="room" src="src/creativity-room.webp" alt="Creativity Room">
+	    </div>
+	  </div>
+	  
+	  <div class="house-floor">
+	    <div id="spiral-stair-room">
+	      <img class="room" src="src/spiral-stairs.webp" alt="Spiral Stair Room">
+	    </div>
+	    
+	    <div id="button-room">
+	      <img id="button-room-image" class="room" src="src/button-room-1.webp" alt="Special PersonalWeb Buttons Room">
+	      <div id="button-room-button" class="tooltip">
+		<a href="https://asgooffeeasme.neocities.org/loadings/loading2buttons" style="width: 100%; height: 100%;"><div style="width: 100%; height: 100%;"></div></a>
+		<span class="tooltip-text"><em>Butt</em>ons?</span>
+	      </div>
+	    </div>
+
+	    <div id="articles-room">
+	      <img id="articles-room-image" class="room" src="src/articles-room.webp" alt="Articles Room">
+	      <div id="articles-room-button" class="tooltip">
+		<a target="_blank"><div style="width: 100%; height: 100%"></div></a>
+		<span class="tooltip-text">Linguistics?</span>
+	      </div>
+	    </div>
+	    
+	  </div>
+	  
+	  <div id="background"></div>
+	  <img class="tree-background" src="src/scenario/tree11.webp" style="left: 160%;">
+	  <img class="tree-background" src="src/scenario/tree11.webp" style="left: -10%;">
+	  <img class="tree-background" src="src/scenario/tree22.webp" style="left: -38%;">
+	  <img class="tree-background" src="src/scenario/tree44.webp" style="left: 130%;">
+	  <img class="tree-background" src="src/scenario/tree33.webp" style="left: -60%;">
+	  <img class="tree-background" src="src/entrance.webp" style="left: 109%; top: 61%;">
+	  
+	  <div class="house-floor">
+	    
+	    <div id="diary-room">
+	      <img id="diary-room-image" class="room" src="src/diary.webp" alt="My False diary">
+	      <div id="diary-room-button" class="tooltip">
+		<a href="./rooms/diary.html" style="width: 100%; height: 100%;"><div style="width: 100%; height: 100%;"></div></a>
+		<span class="tooltip-text">Diary?</span>
+	      </div>
+	    </div>
+	    
+	  </div>
+	</div>
+      </main>
+    </div>
+    
+    <footer></footer>
+    
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+      var scriptTag = document.createElement('script');
+      scriptTag.src = "./index.js";
+      var body = document.getElementsByTagName('body')[0];
+      body.appendChild(scriptTag);
+
+      setInterval(function() {
+	  body.removeChild(scriptTag);
+	  var newScriptTag = document.createElement('script');
+	  newScriptTag.src = scriptTag.src;
+	  body.appendChild(newScriptTag);
+	  scriptTag = newScriptTag;
+      }, 5000);
+      
+      
+      const _panning_container = document.getElementById('panning-container');
+      const _panning_content = document.getElementById('panning-content');
+
+      var __dragging = false;
+      var _start_x, _start_y;
+      var _translate_x = 0, _translate_y = 0;
+
+      _panning_content.addEventListener('mousedown', _start_dragging);
+      _panning_content.addEventListener('mousemove', _drag);
+      _panning_content.addEventListener('mouseup', _stop_dragging);
+      _panning_content.addEventListener('mouseleave', _stop_dragging);
+
+      function _start_dragging(e) {
+	  __dragging = true;
+	  _start_x = e.clientX - _translate_x;
+	  _start_y = e.clientY - _translate_y;
+      }
+
+      function _drag(e) {
+	  if (!__dragging) return;
+	  e.preventDefault();
+	  
+	  let _old_x = _translate_x, _old_y = _translate_y;
+	  _translate_x = e.clientX - _start_x;
+	  _translate_y = e.clientY - _start_y;
+	  
+	  if (_translate_x > 450 || _translate_x < -450) {
+	      _translate_x = _old_x;// - (_old_x / 50);
+	  }
+	  if (_translate_y < -500 || _translate_y > 600) {
+	      _translate_y = _old_y;// - (_old_y / 50);
+	  }
+	  updatePosition();
+      }
+
+      function _stop_dragging() {
+	  __dragging = false;
+      }
+
+      function updatePosition() {
+	  _panning_content.style.transform = `translate(${_translate_x}px, ${_translate_y}px)`;
+      }
+
+      const _about_room = document.getElementById("about-room-button");
+      const _home_room = document.getElementById("home");
+      var _clicked = false;
+
+      _about_room.addEventListener('mousedown', () => {
+	  if (_clicked) return;
+	  
+	  _clicked = true;
+	  _home_room.querySelector("img").src = "src/about-animation.gif";
+	  setTimeout(() => {
+	      //_home_room.querySelector("img").src = "src/first-room2.webp";
+	      window.location.href = "./rooms/about.html";
+	  }, (900));
+      });
+
+      document.getElementById("button-room-button").addEventListener('mouseover', () => {
+	  document.getElementById("button-room").querySelector("img").src = "src/button-room-2.webp";
+      });
+      document.getElementById("button-room-button").addEventListener('mouseout', () => {
+	  document.getElementById("button-room").querySelector("img").src = "src/button-room-1.webp";
+      });
+
+      document.getElementById("articles-room-button").addEventListener('mouseup', () => {
+	  alert("Working In Progress..."); 
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+ul, #tree {
+    list-style-type: none;
+}
+
+#tree {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.caret {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-	user-select: none;
+    -ms-	user-select: none;
+    -o-		user-select: none;
+    user-select: none;
+}
+
+/*
+.caret::before {
+	color: white;
+	display: inline-block;
+	margin-right: 6px;
+}
+
+*/
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+.nested {
+    display: none;
+}
+
+.active {
+    display: block;
+    border-left: 3px solid #242424;
+}
+
+
+.tree-element {
+    display: flex; 
+    justify-content: left; 
+    flex-direction: row; 
+    align-items: center;
+}
+
+.folder {
+    content: url("https://asgooffeeasme.neocities.org/src/icons/folder.webp");
+    --type: folder;
+}
+.open-folder {
+    content: url("https://asgooffeeasme.neocities.org/src/icons/open-folder.webp");
+    --type: folder;
+}
+.file {
+    content: url("https://asgooffeeasme.neocities.org/src/icons/file.webp");
+    --type: file;
+}
+.open-file {
+    content: url("https://asgooffeeasme.neocities.org/src/icons/open-file.webp");
+    --type: file;
+}
+.book {
+    content: url("https://asgooffeeasme.neocities.org/src/icons/book.webp");
+    --type: book;
+}
+.open-book {
+    content: url("https://asgooffeeasme.neocities.org/src/icons/open-book.webp");
+    --type: book;
+}
+
+.tree-element p {
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+}
